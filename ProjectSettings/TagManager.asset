@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Red_material
+  - Yellow_material
+  - Blue_material
+  - Gray_wheel
+  - Gold_wheel
+  - Black_wheel
   layers:
   - Default
   - TransparentFX
