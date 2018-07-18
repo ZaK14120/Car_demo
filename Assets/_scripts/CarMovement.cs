@@ -8,12 +8,12 @@ public class CarMovement : MonoBehaviour {
 
 	Rigidbody rb;
     public bool isMoving;
-    public bool isForce;
+   
 
     public static CarMovement instance;
 
     void Awake() {
-        isForce = false;
+        
         instance = this;
     }
 
@@ -30,7 +30,7 @@ public class CarMovement : MonoBehaviour {
     public void MoveCar()
     {
         rb.AddForce(new Vector3(-1f, 0f, 0f), ForceMode.Acceleration);
-        isForce = true;
+        WheelRotate.instance.isForce = true;
 	}
 
     public void MoveToggle() {
@@ -42,7 +42,7 @@ public class CarMovement : MonoBehaviour {
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         isMoving = false;
-        isForce = false;
+        WheelRotate.instance.isForce = false;
     }
 
     public void ToggleOff()

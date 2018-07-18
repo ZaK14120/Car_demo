@@ -6,14 +6,23 @@ using DG.Tweening;
 public class WheelRotate : MonoBehaviour {
 
     public GameObject[] Wheel;
-	// Use this for initialization
-	void Start () {
-		
+    public bool isForce;
+    // Use this for initialization
+
+    public static WheelRotate instance;
+
+    private void Awake()
+    {
+        instance = this;
+        isForce = false;
+    }
+    void Start () {
+       
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (CarMovement.instance.isForce)
+        if (isForce)
             Acceleration();
         else
             Brakes();

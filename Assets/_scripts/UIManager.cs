@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour {
         isWheelMenu = false;
         materialHolder.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         wheelHolder.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-        Buttons[0].gameObject.SetActive(true);
+       // Buttons[0].gameObject.SetActive(true);
 	}
 	
 	// Update is called once per frame
@@ -38,13 +38,13 @@ public class UIManager : MonoBehaviour {
 		
 	}
 
-    public void LaunchCar() {
+   /* public void LaunchCar() {
         Car.SetActive(true);
         Buttons[0].gameObject.SetActive(false);
         Buttons[1].gameObject.SetActive(true);
         Buttons[2].gameObject.SetActive(true);
         Buttons[3].gameObject.SetActive(true);
-    }
+    }*/
 
     public void SteeringPanel() {
         if (!isSteering)
